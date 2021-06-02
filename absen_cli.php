@@ -8,16 +8,16 @@
 			CURLOPT_ENCODING => "",
 			CURLOPT_COOKIEJAR => 'cookie-name.txt',
 			CURLOPT_COOKIESESSION => true,
-			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apngsigned-exchange;v=b3;q=0.9",
-				"Accept-Encoding: gzip, deflate, br",
-				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-				"Cache-Control: max-age=0",
-				"Connection: keep-alive",
-				"Host: elearning.akakom.ac.id",
-				"Referer: https://elearning.akakom.ac.id/",
-				"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
-			),
+			// CURLOPT_HTTPHEADER => array(
+			// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apngsigned-exchange;v=b3;q=0.9",
+			// 	"Accept-Encoding: gzip, deflate, br",
+			// 	"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+			// 	"Cache-Control: max-age=0",
+			// 	"Connection: keep-alive",
+			// 	"Host: elearning.akakom.ac.id",
+			// 	"Referer: https://elearning.akakom.ac.id/",
+			// 	"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+			// ),
 		];
 		curl_setopt_array($ch, $option);
 		$result = curl_exec($ch);
@@ -42,16 +42,16 @@
 			CURLOPT_POSTFIELDS => "anchor=&logintoken=".$token."&username=".$user."&password=".$pw."&rememberusername=1",
 			CURLOPT_COOKIEJAR => 'cookie-name.txt',
 			CURLOPT_COOKIEFILE => 'cookie-name.txt',
-			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
-				"Accept-Encoding: gzip, deflate, br",
-				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-				"Connection: keep-alive",
-				"Origin:  https://elearning.akakom.ac.id",
-				"Content-Type: application/x-www-form-urlencoded",
-				"Referer: https://elearning.akakom.ac.id/login/index.php",
-				"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
-			),
+			// CURLOPT_HTTPHEADER => array(
+			// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
+			// 	"Accept-Encoding: gzip, deflate, br",
+			// 	"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+			// 	"Connection: keep-alive",
+			// 	"Origin:  https://elearning.akakom.ac.id",
+			// 	"Content-Type: application/x-www-form-urlencoded",
+			// 	"Referer: https://elearning.akakom.ac.id/login/index.php",
+			// 	"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+			// ),
 		];
 		curl_setopt_array($ch, $option);
 		$result = curl_exec($ch);
@@ -84,17 +84,17 @@
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_COOKIEFILE => 'cookie-name.txt',
 			CURLOPT_CUSTOMREQUEST => 'GET',
-			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
-				"signed-exchange;v=b3;q=0.9",
-				"Accept-Encoding: gzip, deflate, br",
-				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-				"Cache-Control: max-age=0",
-				"Connection: keep-alive",
-				"Host: elearning.akakom.ac.id",
-				"Referer: https://elearning.akakom.ac.id/login/index.php",
-				"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
-			),
+			// CURLOPT_HTTPHEADER => array(
+			// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
+			// 	"signed-exchange;v=b3;q=0.9",
+			// 	"Accept-Encoding: gzip, deflate, br",
+			// 	"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+			// 	"Cache-Control: max-age=0",
+			// 	"Connection: keep-alive",
+			// 	"Host: elearning.akakom.ac.id",
+			// 	"Referer: https://elearning.akakom.ac.id/login/index.php",
+			// 	"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+			// ),
 		];
 		curl_setopt_array($ch, $options);
 		$result = curl_exec($ch);
@@ -145,17 +145,17 @@
 				CURLOPT_COOKIEFILE => 'cookie-name.txt',
 				CURLOPT_FOLLOWLOCATION => true,
 				CURLOPT_ENCODING => "",
-				CURLOPT_HTTPHEADER => array(
-					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
-					"signed-exchange;v=b3;q=0.9",
-					"Accept-Encoding: gzip, deflate, br",
-					"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-					"Cache-Control: max-age=0",
-					"Connection: keep-alive",
-					"Host: elearning.akakom.ac.id",
-					"Referer: https://elearning.akakom.ac.id/login/index.php",
-					"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
-				),
+				// CURLOPT_HTTPHEADER => array(
+				// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
+				// 	"signed-exchange;v=b3;q=0.9",
+				// 	"Accept-Encoding: gzip, deflate, br",
+				// 	"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+				// 	"Cache-Control: max-age=0",
+				// 	"Connection: keep-alive",
+				// 	"Host: elearning.akakom.ac.id",
+				// 	"Referer: https://elearning.akakom.ac.id/login/index.php",
+				// 	"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+				// ),
 			];
 			curl_setopt_array($ch, $options);
 			$result = curl_exec($ch);
@@ -188,17 +188,17 @@
 ",
 			CURLOPT_COOKIEFILE => 'cookie-name.txt',
 			CURLOPT_COOKIEJAR => 'cookie-name.txt',
-			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
-				"signed-exchange;v=b3;q=0.9",
-				"Accept-Encoding: gzip, deflate, br",
-				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-				"Cache-Control: max-age=0",
-				"Connection: keep-alive",
-				"Host: elearning.akakom.ac.id",
-				"Referer: https://elearning.akakom.ac.id/login/index.php",
-				"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
-			),
+			// CURLOPT_HTTPHEADER => array(
+			// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
+			// 	"signed-exchange;v=b3;q=0.9",
+			// 	"Accept-Encoding: gzip, deflate, br",
+			// 	"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+			// 	"Cache-Control: max-age=0",
+			// 	"Connection: keep-alive",
+			// 	"Host: elearning.akakom.ac.id",
+			// 	"Referer: https://elearning.akakom.ac.id/login/index.php",
+			// 	"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+			// ),
 		];
 		curl_setopt_array($ch, $options);
 		$result = curl_exec($ch);
