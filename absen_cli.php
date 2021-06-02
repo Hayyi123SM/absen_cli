@@ -27,7 +27,7 @@
 		return $token[5];
 	}
 
-	function login($url, $user, $pw){
+	function login($url, $user, $pw, $opsi){
 		$ch = curl_init();
 		$token = getToken($url);
 		$option = [
@@ -63,9 +63,9 @@
 			$nama = [];
 			preg_match("/[^\d]+/", $tutupSpan[0],$nama);
 			echo "Hai, ". $nama[0] . "\n";
-			// for ($i=0; $i < 5; $i++) { 
-			// 	praAbsen($opsi[$i]);
-			// }
+			for ($i=0; $i < 5; $i++) { 
+				praAbsen($opsi[$i]);
+			}
 		}else{
 			echo "---------------------------------- \n";
 			echo "| Username atau Password salah!! |\n";
@@ -74,8 +74,7 @@
 		}
 	}
 
-	function praAbsen($url, $user, $pw){
-		login($url, $user, $pw);
+	function praAbsen($url){
 		$ch = curl_init();
 		$options = [
 			CURLOPT_URL => $url,
@@ -260,9 +259,7 @@
 				echo "----------------------------------------------- \n";
 			}else{
 				$url = "https://elearning.akakom.ac.id/login/index.php";
-				for ($i=0; $i < 5; $i++) { 
-					praAbsen($matkul[$i],$us,$pw);
-				}
+				login($url,$us,$pw,$matkul);
 				$ulang = false;
 			}
 		}
