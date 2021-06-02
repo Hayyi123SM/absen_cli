@@ -9,7 +9,7 @@
 			CURLOPT_COOKIEJAR => 'cookie-name.txt',
 			CURLOPT_COOKIESESSION => true,
 			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apngsigned-exchange;v=b3;q=0.9",
 				"Accept-Encoding: gzip, deflate, br",
 				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
 				"Cache-Control: max-age=0",
@@ -43,7 +43,7 @@
 			CURLOPT_COOKIEJAR => 'cookie-name.txt',
 			CURLOPT_COOKIEFILE => 'cookie-name.txt',
 			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/",
+				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
 				"Accept-Encoding: gzip, deflate, br",
 				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
 				"Connection: keep-alive",
@@ -85,7 +85,7 @@
 			CURLOPT_COOKIEFILE => 'cookie-name.txt',
 			CURLOPT_CUSTOMREQUEST => 'GET',
 			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/",
+				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
 				"signed-exchange;v=b3;q=0.9",
 				"Accept-Encoding: gzip, deflate, br",
 				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
@@ -146,7 +146,7 @@
 				CURLOPT_FOLLOWLOCATION => true,
 				CURLOPT_ENCODING => "",
 				CURLOPT_HTTPHEADER => array(
-					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/",
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
 					"signed-exchange;v=b3;q=0.9",
 					"Accept-Encoding: gzip, deflate, br",
 					"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
@@ -189,7 +189,7 @@
 			CURLOPT_COOKIEFILE => 'cookie-name.txt',
 			CURLOPT_COOKIEJAR => 'cookie-name.txt',
 			CURLOPT_HTTPHEADER => array(
-				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/",
+				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
 				"signed-exchange;v=b3;q=0.9",
 				"Accept-Encoding: gzip, deflate, br",
 				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
