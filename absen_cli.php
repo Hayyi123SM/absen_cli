@@ -124,8 +124,11 @@
 		if (count($cell2) != 1) {
 			$link = explode('<a href="', $cell2[1]);
 			$endpoint = explode('">', $link[1]);
+			$file = fopen('endpoint.txt', 'a+');
+			fwrite($file, $endpoint[0]."\n");
+			fclose($file);
 			// return var_dump($endpoint);
-			return absen($endpoint[0],$nMatkul);
+			return absen($endpoint[0],$nMatkul, $url);
 		}else{
 			echo "=================================== \n";
 			echo " | Absen ".$nMatkul." belum ada!! |\n";
@@ -133,7 +136,7 @@
 		}
 	}
 
-	function absen($url, $nMatkul){
+	function absen($url, $nMatkul, $opsi){
 			$ch = curl_init();
 			$options = [
 				CURLOPT_URL => $url,
@@ -157,10 +160,52 @@
 			curl_setopt_array($ch, $options);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			// return $result;
-			echo "+++++++++++++++++++++++++++++++++++++ \n";
-			echo "+\[ Absen ".$nMatkul." berhasil!! ]/+ \n";
-			echo "+++++++++++++++++++++++++++++++++++++ \n";
+			if ($opsi == "https://elearning.akakom.ac.id/mod/attendance/view.php?id=13086") {
+				$label = explode('<label class="form-check-inline form-check-label  fitem  ">', $result);
+				$radio = explode(' ', $label[1]);
+				$Rvalue = explode('=', $radio[9]);
+				$key = explode('?', $url);
+				return grab_prakPWC($key[0],$key[1],$Rvalue[1]);
+				
+			}else{
+				echo "+++++++++++++++++++++++++++++++++++++ \n";
+				echo "+\[ Absen ".$nMatkul." berhasil!! ]/+ \n";
+				echo "+++++++++++++++++++++++++++++++++++++ \n";
+			}
+	}
+
+	function grab_prakPWC($url, $key, $status){
+		$sesskey = explode("=", $key);
+		$ch = curl_init();
+		$options = [
+			CURLOPT_URL => $url,
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_COOKIEFILE => 'cookie-name.txt',
+			CURLOPT_FOLLOWLOCATION => TRUE,
+			CURLOPT_ENCODING => "",
+			CURLOPT_POST => 1,
+			CURLOPT_POSTFIELDS => $key."&sesskey".$sesskey[2]."&_qf__mod_attendance_student_attendance_form=1&mform_isexpanded_id_session=1&status=".$status."&submitbutton=Save+changes
+",
+			CURLOPT_COOKIEFILE => 'cookie-name.txt',
+			CURLOPT_COOKIEJAR => 'cookie-name.txt',
+			CURLOPT_HTTPHEADER => array(
+				"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/",
+				"signed-exchange;v=b3;q=0.9",
+				"Accept-Encoding: gzip, deflate, br",
+				"Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+				"Cache-Control: max-age=0",
+				"Connection: keep-alive",
+				"Host: elearning.akakom.ac.id",
+				"Referer: https://elearning.akakom.ac.id/login/index.php",
+				"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+			),
+		];
+		curl_setopt_array($ch, $options);
+		$result = curl_exec($ch);
+		curl_close($ch);
+		echo "+++++++++++++++++++++++++++++++++++++ \n";
+		echo "+\[ Absen Praktik PWC berhasil!! ]/+ \n";
+		echo "+++++++++++++++++++++++++++++++++++++ \n";
 	}
 
 	function start($ulang = true){

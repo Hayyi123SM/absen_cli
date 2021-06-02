@@ -1,0 +1,10 @@
+sessid = 2189 => jaringan komputer
+	   = 4370 => alvecma
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=4370&amp;sesskey=6UV1cNpKyE
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=2189&amp;sesskey=SG6sOnID4s
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=2189&amp;sesskey=NZikuEKSSL
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=4888&amp;sesskey=5ZF5XXJ3lU
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=4888&amp;sesskey=N3hQK4kPkU
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=4903&amp;sesskey=DmYIcT42os
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=4903&amp;sesskey=NGpD5EclWr
+https://elearning.akakom.ac.id/mod/attendance/attendance.php?sessid=4903&amp;sesskey=H6RHBVCOek
