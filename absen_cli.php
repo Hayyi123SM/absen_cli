@@ -102,21 +102,21 @@
 		$cell2 = explode('<td class="statuscol cell c2 lastcol" style="text-align:center;width:*;" colspan="3">', $result);
 		$matkul = explode("id=", $url);
 			switch ($matkul[1]) {
-				case 13085:
-					$nMatkul = "PWC";
+				case 25447:
+					$nMatkul = "Data Lake";
 					break;
-				case 13086:
-					$nMatkul = "PrakPWC";
+				case 26074:
+					$nMatkul = "Teknologi Mobile";
 					break;
-				case 18860:
-					$nMatkul = "Kec.Butan";
-					break;
-				case 14391:
-					$nMatkul = "ALVECMA";
-					break;
-				case 13083:
-					$nMatkul = "Jaringan";
-					break;
+				// case 18860:
+				// 	$nMatkul = "Kec.Butan";
+				// 	break;
+				// case 14391:
+				// 	$nMatkul = "ALVECMA";
+				// 	break;
+				// case 13083:
+				// 	$nMatkul = "Jaringan";
+				// 	break;
 				default:
 					$nMatkul = "Ada yang salah";
 					break;
@@ -215,11 +215,8 @@
 			echo "Silahkan masukan password : ";
 			$pw = trim(fgets(STDIN));
 			$matkul = [
-				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=13085",
-				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=13086",
-				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=18860",
-				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=14391",
-				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=13083",
+				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=25447",
+				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=26074",
 			];
 			// $ulg = true;
 			// while ($ulg) {
