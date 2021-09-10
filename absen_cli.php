@@ -108,12 +108,12 @@
 				case 26074:
 					$nMatkul = "Teknologi Mobile";
 					break;
-				// case 18860:
-				// 	$nMatkul = "Kec.Butan";
-				// 	break;
-				// case 14391:
-				// 	$nMatkul = "ALVECMA";
-				// 	break;
+				case 26039:
+					$nMatkul = "Cloud Komputing";
+					break;
+				case 26930:
+					$nMatkul = "Struktur Data";
+					break;
 				// case 13083:
 				// 	$nMatkul = "Jaringan";
 				// 	break;
@@ -217,6 +217,8 @@
 			$matkul = [
 				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=25447",
 				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=26074",
+				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=26039",
+				"https://elearning.akakom.ac.id/mod/attendance/view.php?id=26930",
 			];
 			// $ulg = true;
 			// while ($ulg) {
