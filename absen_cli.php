@@ -6,7 +6,7 @@
 			CURLOPT_RETURNTRANSFER => 1,
 			CURLOPT_CUSTOMREQUEST => "GET",
 			CURLOPT_ENCODING => "",
-			CURLOPT_COOKIEJAR => 'cookie-name.txt',
+			CURLOPT_COOKIEJAR => 'cookie-token.txt',
 			CURLOPT_COOKIESESSION => true,
 			// CURLOPT_HTTPHEADER => array(
 			// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apngsigned-exchange;v=b3;q=0.9",
@@ -40,8 +40,8 @@
 			CURLOPT_CUSTOMREQUEST => "POST",
 			CURLOPT_POST => 1,
 			CURLOPT_POSTFIELDS => "anchor=&logintoken=".$token."&username=".$user."&password=".$pw."&rememberusername=1",
-			CURLOPT_COOKIEJAR => 'cookie-name.txt',
-			CURLOPT_COOKIEFILE => 'cookie-name.txt',
+			CURLOPT_COOKIEFILE => 'cookie-token.txt',
+			CURLOPT_COOKIEJAR => 'cookie-login.txt',
 			// CURLOPT_HTTPHEADER => array(
 			// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
 			// 	"Accept-Encoding: gzip, deflate, br",
@@ -82,7 +82,7 @@
 			CURLOPT_TIMEOUT => 0,
 			CURLOPT_ENCODING => "",
 			CURLOPT_FOLLOWLOCATION => true,
-			CURLOPT_COOKIEFILE => 'cookie-name.txt',
+			CURLOPT_COOKIEFILE => 'cookie-login.txt',
 			CURLOPT_CUSTOMREQUEST => 'GET',
 			// CURLOPT_HTTPHEADER => array(
 			// 	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng",
@@ -99,6 +99,7 @@
 		curl_setopt_array($ch, $options);
 		$result = curl_exec($ch);
 		curl_close($ch);
+		var_dump($result);die;
 		$cell2 = explode('<td class="statuscol cell c2 lastcol" style="text-align:center;width:*;" colspan="3">', $result);
 		$matkul = explode("id=", $url);
 			switch ($matkul[1]) {
@@ -142,7 +143,7 @@
 				CURLOPT_URL => $url,
 				CURLOPT_RETURNTRANSFER => 1,
 				CURLOPT_CUSTOMREQUEST => "GET",
-				CURLOPT_COOKIEFILE => 'cookie-name.txt',
+				CURLOPT_COOKIEFILE => 'cookie-login.txt',
 				CURLOPT_FOLLOWLOCATION => true,
 				CURLOPT_ENCODING => "",
 				// CURLOPT_HTTPHEADER => array(
