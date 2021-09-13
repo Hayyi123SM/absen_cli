@@ -63,7 +63,7 @@
 			$nama = [];
 			preg_match("/[^\d]+/", $tutupSpan[0],$nama);
 			echo "Hai, ". $nama[0] . "\n";
-			for ($i=0; $i < 5; $i++) { 
+			for ($i=0; $i < count($opsi); $i++) { 
 				praAbsen($opsi[$i]);
 			}
 		}else{
